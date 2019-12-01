@@ -7,9 +7,7 @@
  * 
  * 
  * DEVELOPMENT CYCLE:
- * Gesucht: Externe Textdatei in stdout wiedergeben.
- * Gegeben: Externe Textdateien.
- * 
+ * Gesucht: Fibonacci Zahlen mit 100, 1000 und 10000 Stellen. * 
  * 
  * Created on 01. December 2019
  */
@@ -19,11 +17,11 @@
 #include <stdlib.h>
 
 // definitions
+#define DIGITYPE char
 #define EONCHAR 0
 #define EONINT -1
-#define DIGITYPE char
 #define EON EONCHAR
-#define MAXDIGITS 10000
+#define MAXDIGITS 100
 
 // initialize functions
 void print_huge_number( const DIGITYPE *ptr, const int n);
@@ -36,27 +34,33 @@ void add_huge_numbers( const DIGITYPE *ptr1, const int n1,
  */
 int main(int argc, char** argv) {
     
+    DIGITYPE *ptr[MAXDIGITS];
+    DIGITYPE *ptr1[MAXDIGITS];
+    DIGITYPE *ptr2[MAXDIGITS];
+       
     print_huge_number("1",1);
-    add_huge_numbers("1",1,"1",1,"1",1);
+    add_huge_numbers("1",1,"2",1,"0",10);
+    print_huge_number("1",1);
     
     return (EXIT_SUCCESS);
 }
 
 /*
  * print huge number
+ * return array as number.
  */
 void print_huge_number( const DIGITYPE *ptr, const int n){
-    
-    printf("huuuuuuge number\n");
+        
+    printf("Pointer als Zahl  --> %ld\n", strtol(ptr,NULL,0));
 }
 
 /*
- * print huge number
+ * add huge numbers
+ * addition of 3 arrays as arguments
  */
 void add_huge_numbers( const DIGITYPE *ptr1, const int n1,
         const DIGITYPE *ptr2, const int n2,
-        int *DIGITYPE *ptr, const int n) {
+        DIGITYPE *ptr, const int n) {
     
-    printf("add");
-    
+    printf("test\n");
 }
